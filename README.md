@@ -38,7 +38,7 @@
 
 | Home Screen | Quiz Screen | Result Screen |
 |-------------|-------------|---------------|
-| ![Home](screenshots/home.png) | ![Quiz](screenshots/quiz.png) | ![Result](screenshots/result.png) |
+| ![Home](screenshots/Home_Screen.jpg) | ![Quiz](screenshots/quiz.png) | ![Result](screenshots/result.png) |
 
 ---
 
