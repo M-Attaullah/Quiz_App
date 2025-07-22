@@ -11,14 +11,15 @@ class HomeScreen extends StatelessWidget {
         title: const Text('Quiz App 💡'),
         centerTitle: true,
         backgroundColor: const Color(0xFF396BE9),
-        elevation: 0,
       ),
       body: Container(
         color: const Color(0xFF396BE9),
         child: Column(
+          mainAxisAlignment:
+              MainAxisAlignment.start, // changed from center to start
           crossAxisAlignment: CrossAxisAlignment.center,
           children: [
-            const SizedBox(height: 30), // Reduced gap from AppBar
+            const SizedBox(height: 20), // added to control gap below AppBar
             const Text(
               'Instructions',
               style: TextStyle(
@@ -27,7 +28,7 @@ class HomeScreen extends StatelessWidget {
                 color: Colors.white,
               ),
             ),
-            const SizedBox(height: 10),
+            const SizedBox(height: 15),
             const Padding(
               padding: EdgeInsets.symmetric(horizontal: 25.0),
               child: Text(
@@ -38,42 +39,35 @@ class HomeScreen extends StatelessWidget {
                 style: TextStyle(color: Colors.white70, fontSize: 16),
               ),
             ),
-            const Spacer(), // Pushes button to bottom with margin
-            Padding(
-              padding: const EdgeInsets.only(bottom: 50.0), // Bottom spacing
-              child: InkWell(
-                onTap: () {
-                  Navigator.push(
-                    context,
-                    MaterialPageRoute(builder: (context) => const QuizScreen()),
-                  );
-                },
-                borderRadius: BorderRadius.circular(12),
-                child: Container(
-                  padding: const EdgeInsets.symmetric(
-                    horizontal: 40,
-                    vertical: 15,
-                  ),
-                  decoration: BoxDecoration(
-                    color: Colors.indigoAccent,
-                    borderRadius: BorderRadius.circular(12),
-                    border: Border.all(color: Colors.white),
-                    boxShadow: [
-                      BoxShadow(
-                        color: Colors.black26,
-                        blurRadius: 6,
-                        offset: Offset(0, 3),
-                      ),
-                    ],
-                  ),
-                  child: const Text(
-                    'Start Quiz',
-                    style: TextStyle(
-                      fontSize: 18,
-                      color: Colors.white,
-                      fontWeight: FontWeight.bold,
+            const SizedBox(height: 40),
+            InkWell(
+              onTap: () {
+                Navigator.push(
+                  context,
+                  MaterialPageRoute(builder: (context) => const QuizScreen()),
+                );
+              },
+              borderRadius: BorderRadius.circular(12),
+              child: Container(
+                padding: const EdgeInsets.symmetric(
+                  horizontal: 40,
+                  vertical: 15,
+                ),
+                decoration: BoxDecoration(
+                  color: Colors.indigoAccent,
+                  borderRadius: BorderRadius.circular(12),
+                  border: Border.all(color: Colors.white),
+                  boxShadow: [
+                    BoxShadow(
+                      color: Colors.black26,
+                      blurRadius: 6,
+                      offset: Offset(0, 3),
                     ),
-                  ),
+                  ],
+                ),
+                child: const Text(
+                  'Start Quiz',
+                  style: TextStyle(fontSize: 18, color: Colors.white),
                 ),
               ),
             ),
